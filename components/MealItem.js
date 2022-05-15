@@ -7,10 +7,21 @@ import {
   Platform,
 } from 'react-native';
 
-const MealItem = ({ title, imageUrl, duration, complexity, affordability }) => {
+const MealItem = ({
+  title,
+  imageUrl,
+  duration,
+  complexity,
+  affordability,
+  onPress,
+}) => {
   return (
     <View style={styles.mealItem}>
-      <Pressable android_ripple={{ color: 'grey' }} style={({pressed}) => pressed ? styles.mealItemPressed : null}>
+      <Pressable
+        android_ripple={{ color: 'grey' }}
+        style={({ pressed }) => (pressed ? styles.mealItemPressed : null)}
+        onPress={onPress}
+      >
         <View style={styles.innnerContainer}>
           <View>
             <Image style={styles.image} source={{ uri: imageUrl }} />
@@ -40,7 +51,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
   },
   mealItemPressed: {
-    opacity: 0.5
+    opacity: 0.5,
   },
   innnerContainer: {
     borderRadius: 8,

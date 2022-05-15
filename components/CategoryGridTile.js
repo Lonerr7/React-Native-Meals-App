@@ -1,6 +1,6 @@
 import { View, Pressable, Text, StyleSheet, Platform } from 'react-native';
 
-const CategoryGridTile = ({ title, color, onPress, mealId }) => {
+const CategoryGridTile = ({ title, color, onPress }) => {
   return (
     <View style={[styles.gridItem]}>
       <Pressable

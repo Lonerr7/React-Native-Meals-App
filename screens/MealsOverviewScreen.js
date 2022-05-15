@@ -21,6 +21,12 @@ const MealsOverviewScreen = ({ route, navigation }) => {
   }, []);
 
   const renderMealItem = ({ item }) => {
+    const pressHandler = () => {
+      navigation.navigate('MealDetails', {
+        mealId: item.id,
+      });
+    };
+
     return (
       <MealItem
         title={item.title}
@@ -28,6 +34,7 @@ const MealsOverviewScreen = ({ route, navigation }) => {
         affordability={item.affordability}
         duration={item.duration}
         complexity={item.complexity}
+        onPress={pressHandler}
       />
     );
   };
