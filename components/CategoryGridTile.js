@@ -21,7 +21,7 @@ const CategoryGridTile = ({ title, color }) => {
 const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
-    margin: 60,
+    margin: 16,
     height: 150,
     borderRadius: 8,
     elevation: 4,
