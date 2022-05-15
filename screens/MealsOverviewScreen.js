@@ -10,7 +10,15 @@ const MealsOverviewScreen = ({ route }) => {
   );
 
   const renderMealItem = ({ item }) => {
-    return <MealItem title={item.title} />;
+    return (
+      <MealItem
+        title={item.title}
+        imageUrl={item.imageUrl}
+        affordability={item.affordability}
+        duration={item.duration}
+        complexity={item.complexity}
+      />
+    );
   };
 
   return (
